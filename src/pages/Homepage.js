@@ -7,7 +7,7 @@ const Homepage = () => {
   let [page, setPage] = useState(1); //其實起始值設多少都沒差，因為進入頁面時useEffect執行fetchData(curatedURL)會把Page設成2
   let [currentSearch, setCurrentSearch] = useState("");
 
-  const apiKey = process.env.REACT_APP_APIKEY; //React要使用的環境變數須前綴（prefix）:REACT_APP
+  const apiKey = "563492ad6f91700001000001cb4ec69d50894c53b7cdae4f6d2f6cf6"; //React要使用的環境變數須前綴（prefix）:REACT_APP
   const curatedURL = "https://api.pexels.com/v1/curated?per_page=4"; //Pexels精選照片
   const searchURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=4`; //pexels搜尋照片
 
