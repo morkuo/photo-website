@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background-color: rgba(65, 125, 204, 0.842);
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+    li {
+      margin: 1rem 0rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+//homepage and about div
+.pagebody {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .search {
+    margin: 2rem 0rem;
+
+    input {
+      height: 25px;
+    }
+
+    button {
+      height: 25px;
+      width: 65px;
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    width: 1200px; //固定圖片卡展示區域的寬度，使每行固定展示四張
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; //超出顯示寬度的內容自動向下排
+
+    .card {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .image {
+        height: 220px;
+        width: 220px;
+        border-radius: 20px; //四角圓滑化
+        overflow: hidden; //內容物超出自身長寬時，超出部分隱藏
+
+        //滑鼠移上標籤時，寬、長放大為2倍（搭配overflow）
+        img {
+          &:hover {
+            transform: scale(1.4, 1.4);
+          }
+        }
+      }
+
+      .info {
+        margin: 0.3rem;
+        a {
+          color: black;
+          font-size: small;
+        }
+      }
+    }
+  }
+
+  .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    button {
+      height: 25px;
+      width: 65px;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(219, 216, 216);
+}
